@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import  {BrowserRouter, NavLink,Route} from "react-router-dom";
 import {Menu} from "./components/Menu";
@@ -18,7 +17,8 @@ function App(){
                <Menu/>
          </div>
         <div className="col-9">
-            <Route path="/profile" render={()=>{return (<Profile/>)}}/>
+            <Route exact path="/profile" render={()=>{return (<Profile/>)}}/>
+            <Route path="/user" render={()=>{return (<Profile/>)}}/>
             <Route path="/settings" render={()=>{return (<Settings/>)}}/>
             <Route path="/users" render={()=>{return (<Users/>)}}/>
         </div>
